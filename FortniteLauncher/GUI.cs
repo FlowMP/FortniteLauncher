@@ -27,9 +27,10 @@ namespace FortniteLauncher
 		//For example, just before your main loop, on OnEnable for unity.
 		void Initialize()
 		{
-
+#if DEBUG
+#else
 			materialComboBox1.Visible = false; // for hosterss false means not for hoster
-
+#endif
 			client = new DiscordRpcClient("1112565946129846273");
 
 			//Subscribe to events
